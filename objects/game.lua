@@ -41,7 +41,7 @@ function Game:start (gameMode)
     self.gameMode = gameMode
     
     local roof = #(love.filesystem.getDirectoryItems("/res/music/" .. self.gameMode .. "/")) / 2
-    local value = 3 --math.random (1, roof)
+    local value = math.random (1, roof)
     
     self.song = Song:new ("res/music/" .. self.gameMode .. "/" .. value .. ".lua", self)
     
